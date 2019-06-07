@@ -5,7 +5,11 @@ def index(request):
     return HttpResponse('Hello World!')
 
 def articles(request):
-    return HttpResponse('articles')
+    search = request.GET.get('search', '')
+    response = 'articles'
+    if search:
+        response = ' ' + search
+    return HttpResponse(response)
 
 def articlesDetails(request, id):
     response = 'id: ' + str(id)
