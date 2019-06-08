@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class Record(models.Model):
+    name = models.TextField()
+    description = models.TextField()
+    startTime = models.TextField()
+    endTime = models.TextField()
+    userId = models.TextField()
