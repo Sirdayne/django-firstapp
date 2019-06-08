@@ -23,5 +23,7 @@ urlpatterns = [
     path('articles/<int:id>/', views.articlesDetails),
     path('records/', views.records),
     path('records/create/', views.recordsCreate),
+    path('records/edit/<int:id>/', views.recordsEdit),
+    path('records/delete/<int:id>/', views.recordsDelete),
     path('admin/', admin.site.urls)
 ]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+</head>
+<body class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Name:</label><br>
+            <input type="text" name="name" value="{{record.name}}"/>
+        </p>
+        <p>
+            <label>Description:</label><br>
+            <input type="text" name="description" value="{{record.description}}"/>
+        </p>
+        <input type="submit" value="Save" >
+    </form>
+</body>
+</html>
